@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    # Global tools to be used by the pipeline
+    // Global tools to be used by the pipeline
     tools { 
         maven 'maven-3.6.3' 
         jdk 'jdk8' 
