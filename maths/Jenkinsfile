@@ -46,7 +46,7 @@ pipeline {
                 rtMavenRun (
                     tool: "maven-3.6.3", // Tool name from Jenkins configuration
                     pom: 'maths/pom.xml',
-                    goals: 'clean install',
+                    goals: "clean install -Dcoverage_quality_gate=${params.CODE_COVERAGE_QG}",
                     deployerId: "MAVEN_DEPLOYER",
                     resolverId: "MAVEN_RESOLVER"
                 )
